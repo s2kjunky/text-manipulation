@@ -47,7 +47,7 @@ sub("(a+)", "D\\1D", x)
 gsub("(a+)", "D\\1D", x)
 
 ####################################################################
-clean_data <- ("C(U: Stuart_server_01 / Stuart to Earlham / rsl a -39.0/ rsl b -44")
+clean_data <- ("C(U: Stuart_server_01 / Stuart to Earlham / rsl a -39.0/ rsl b -44.899")
 gsub("U:", "", clean_data) -> clean_data
 clean_data
 sub("C", "", clean_data) -> clean_data #sub only captures first occurance then stops
@@ -77,5 +77,6 @@ RSLA
 as.character(clean_data[[1]][4]) -> RSLB
 RSLB
 winners <- data.frame(SERVER, HOP, RSLA, RSLB)
+winners
 
-
+####################################################################
